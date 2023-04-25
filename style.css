@@ -102,8 +102,8 @@ body {
 }
 
 .button:is(:hover, :focus) {
-    background-origin: var(--clr-primary-500);
-}
+    background-color: var(--clr-primary-500);
+  }
 
 .flex-group {
     display: flex;
