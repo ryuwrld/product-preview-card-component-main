@@ -94,6 +94,13 @@ body {
     border-radius: .5rem;
 }
 
+.button[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+
 .button:is(:hover, :focus) {
     background-origin: var(--clr-primary-500);
 }
@@ -122,11 +129,19 @@ body {
     background-color: var(--clr-neutral-100);
     border-radius: 0.5rem;
     overflow: hidden;
+    display: grid;
+    max-width: 600px;
+}
+
+@media (min-width: 600px) {
+    .product {
+        --info-padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .product-info {
     display: grid;
-    border: 3px solid red;
     gap: var(--info-spacing);
     padding: var(--info-padding);
 }
